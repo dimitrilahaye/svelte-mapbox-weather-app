@@ -1,5 +1,5 @@
 import mapbox from 'mapbox-gl';
 
-mapbox.accessToken = 'pk.eyJ1IjoibXlnZW9tYXJrZXQtZGV2IiwiYSI6ImNqZG9zM3c4NDBwa2kyd21yb3I5YTk4bXEifQ.wTo4gJEC9EmICabPtNVryg';
+mapbox.accessToken = 'pk.eyJ1Ijoic2VhcmNoLW1hY2hpbmUtdXNlci0xIiwiYSI6ImNrN2Y1Nmp4YjB3aG4zZ253YnJoY21kbzkifQ.JM5ZeqwEEm-Tonrk5wOOMw';
 
 export { mapbox };
