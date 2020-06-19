@@ -22,7 +22,7 @@ const createCitiesStore = () => {
  * @param name
  */
 const getCities = async (name) => {
-  const response = await fetch(`${config.urls.data}?q=${name}&type=like&appid=${config.token}`);
+  const response = await fetch(`${config.urls.data}?q=${name}&type=like&appid=${config.tokens.data}`);
   const cities = await response.json();
 
   if (response.ok) {
@@ -60,7 +60,7 @@ const createWeatherStore = () => {
  * @param id
  */
 async function getWeatherByCityId(id) {
-  const response = await fetch(`${config.urls.api}?id=${id}&appid=${config.token}`);
+  const response = await fetch(`${config.urls.api}?id=${id}&appid=${config.tokens.api}`);
   const weather = await response.json();
 
   if (response.ok) {
@@ -75,7 +75,7 @@ async function getWeatherByCityId(id) {
  * @param lat
  */
 async function getWeatherByCoordinates(lng, lat) {
-  const response = await fetch(`${config.urls.api}?lat=${lat}&lon=${lng}&appid=${config.token}`);
+  const response = await fetch(`${config.urls.api}?lat=${lat}&lon=${lng}&appid=${config.tokens.api}`);
   const weather = await response.json();
 
   if (response.ok) {
