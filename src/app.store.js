@@ -22,7 +22,7 @@ const createCitiesStore = () => {
  * @param name
  */
 const getCities = async (name) => {
-  const response = await fetch(`${config.urls.data}?q=${name}&type=like&appid=439d4b804bc8187953eb36d2a8c26a02`);
+  const response = await fetch(`${config.urls.data}?q=${name}&type=like&appid=${config.token}`);
   const cities = await response.json();
 
   if (response.ok) {
