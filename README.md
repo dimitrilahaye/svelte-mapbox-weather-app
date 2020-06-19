@@ -1,6 +1,9 @@
 # svelte-mapbox-weather-app
 I wanted to test Svelte JS, so I did an app with Mapbox GL which gives you the weather all around the world
 
+
+> Result visible here :point_right: https://dimitrilahaye.github.io/svelte-mapbox-weather-app/
+
 ## Get started on local
 
 Install the dependencies...
