@@ -21,9 +21,7 @@
    * Trigger event with coordinates when we click on the map
    * @param coordinates
    */
-  const clickOnMap = (coordinates) => {
-    dispatch('clickonmap', {coordinates});
-  };
+  const clickOnMap = (coordinates) => dispatch('clickonmap', {coordinates});
 
   /**
    * On mount, create new map
@@ -35,12 +33,10 @@
       center: [lng, lat],
       zoom
     });
-    map.on('click', function (e) {
-      clickOnMap(e.lngLat);
-    });
-    return () => {
-      map.remove();
-    };
+
+    map.on('click', (e) => clickOnMap(e.lngLat));
+
+    return () => map.remove();
   });
 
   /**
