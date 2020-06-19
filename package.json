@@ -1,9 +1,11 @@
 {
+  "homepage": "https://dimitrilahaye.github.io/svelte-mapbox-weather-app",
   "name": "svelte-app",
   "version": "1.0.0",
   "devDependencies": {
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
+    "gh-pages": "^3.0.0",
     "mini-css-extract-plugin": "^0.6.0",
     "serve": "^11.0.0",
     "style-loader": "^0.23.1",
@@ -14,8 +16,10 @@
     "webpack-dev-server": "^3.3.1"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack",
-    "dev": "node --max_old_space_size=5096 node_modules/webpack-dev-server/bin/webpack-dev-server --content-base public"
+    "build": "node --max_old_space_size=5096 node_modules/cross-env/dist/bin/cross-env NODE_ENV=production node_modules/webpack/bin/webpack --content-base public",
+    "dev": "node --max_old_space_size=5096 node_modules/webpack-dev-server/bin/webpack-dev-server --content-base public",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public"
   },
   "dependencies": {
     "lodash": "^4.17.15",
